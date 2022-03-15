@@ -10,7 +10,7 @@ namespace CS_DZ_NEW_Massive_1
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 3, 56, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 8, 9, 0, 0 };
+            int[] numbers = { 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 3, 56, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 8, 9, 0, 0 };
             int repits = 0;
             int maxRepits = 0;
             int repitedNumbers = 0;
