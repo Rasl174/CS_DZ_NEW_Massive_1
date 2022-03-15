@@ -10,23 +10,28 @@ namespace CS_DZ_NEW_Massive_1
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 1, 1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 };
+            int[] numbers = { 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 3, 56, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 8, 9, 0, 0 };
             int repits = 0;
+            int maxRepits = 0;
             int repitedNumbers = 0;
 
-            for (int i = 0; i < numbers.Length - 1; i++)
+            for (int i = 1; i < numbers.Length; i++)
             {
-                for (int j = i + 1; j < numbers.Length; j++)
+                if (numbers[i] == numbers[i - 1])
                 {
-                    if (numbers[i] == numbers[j])
-                    {
-                        repitedNumbers = numbers[i];
-                        numbers[i] = numbers[j];
-                        numbers[j] = repitedNumbers;
-                        repits++;
-                    }
+                    repits++;
+                }
+                else
+                {
+                    repits = 0;
+                }
+                if (repits >= maxRepits)
+                {
+                    repitedNumbers = numbers[i];
+                    maxRepits = repits + 1;
                 }
             }
+
 
             for (int i = 0; i < numbers.Length; i++)
             {
@@ -34,7 +39,7 @@ namespace CS_DZ_NEW_Massive_1
             }
             Console.WriteLine();
             Console.WriteLine(repitedNumbers);
-            Console.WriteLine(repits);
+            Console.WriteLine(maxRepits);
         }
     }
 }
